@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Dot plot comparing area type by median access and mean growth.",
+  "width": "container",
+  "height": 300,
+  "background": "transparent",
+  "data": {"url": "data/area_summary.csv"},
+  "mark": {"type": "circle", "filled": true, "stroke": "#1c2526", "strokeWidth": 0.6},
+  "encoding": {
+    "x": {
+      "field": "median_stops_per_10000_people",
+      "type": "quantitative",
+      "title": "Median all-stop access per 10,000 residents",
+      "scale": {"domain": [30, 45]}
+    },
+    "y": {
+      "field": "mean_growth_pct",
+      "type": "quantitative",
+      "title": "Mean growth 2024-25 (%)",
+      "scale": {"domain": [1.3, 2.0]}
+    },
+    "size": {
+      "field": "population_2025",
+      "type": "quantitative",
+      "legend": null,
+      "scale": {"range": [500, 1800]}
+    },
+    "color": {
+      "field": "area_band",
+      "type": "nominal",
+      "title": "Area type",
+      "scale": {
+        "domain": ["Inner Melbourne", "Middle ring", "Outer / growth corridor"],
+        "range": ["#1f7a63", "#5f7f94", "#6f9ec7"]
+      },
+      "legend": {"orient": "bottom"}
+    },
+    "tooltip": [
+      {"field": "area_band", "title": "Area type"},
+      {"field": "areas", "title": "SA2 count"},
+      {"field": "population_2025", "title": "Population", "format": ",.0f"},
+      {"field": "median_stops_per_10000_people", "title": "Median all stops per 10,000", "format": ".2f"},
+      {"field": "mean_growth_pct", "title": "Mean growth", "format": ".2f"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"gridColor": "#dfe5e3", "labelColor": "#4b5658", "titleColor": "#293233"},
+    "legend": {"labelColor": "#293233", "titleColor": "#293233"}
+  }
+}

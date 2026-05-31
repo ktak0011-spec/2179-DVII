@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Multi-line chart of population trajectories for selected high-growth and inner SA2 areas.",
+  "width": "container",
+  "height": 360,
+  "background": "transparent",
+  "data": {"url": "data/population_timeseries.csv"},
+  "layer": [
+    {
+      "mark": {"type": "line", "point": true, "strokeWidth": 2},
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal", "title": "Year"},
+        "y": {"field": "population", "type": "quantitative", "title": "Population", "axis": {"format": ",.0f"}},
+        "color": {
+          "field": "sa2_name",
+          "type": "nominal",
+          "title": "Selected SA2",
+          "legend": {"orient": "bottom", "columns": 2}
+        },
+        "strokeDash": {
+          "field": "area_band",
+          "type": "nominal",
+          "title": "Area type",
+          "legend": {"orient": "bottom"}
+        },
+        "tooltip": [
+          {"field": "sa2_name", "title": "SA2"},
+          {"field": "year", "title": "Year"},
+          {"field": "population", "title": "Population", "format": ",.0f"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.year == 2025 && datum.sa2_name == 'Wollert'"},
+        {"calculate": "'Wollert: ' + format(datum.population, ',.0f')", "as": "end_label"}
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 8,
+        "dy": -8,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#293233"
+      },
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal", "title": "Year"},
+        "y": {"field": "population", "type": "quantitative", "title": "Population"},
+        "text": {"field": "end_label"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"gridColor": "#dfe5e3", "labelColor": "#4b5658", "titleColor": "#293233"},
+    "legend": {"labelColor": "#293233", "titleColor": "#293233"}
+  }
+}

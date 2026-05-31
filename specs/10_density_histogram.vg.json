@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Faceted histogram of population density by access category.",
+  "width": "container",
+  "height": 300,
+  "background": "transparent",
+  "data": {"url": "data/melbourne_access.csv"},
+  "transform": [
+    {"filter": "datum.population_2025 >= 3000"},
+    {"calculate": "datum.population_density_2025 / 1000", "as": "density_thousands"}
+  ],
+  "mark": {"type": "bar", "cornerRadiusTopLeft": 2, "cornerRadiusTopRight": 2},
+  "encoding": {
+    "x": {
+      "field": "density_thousands",
+      "type": "quantitative",
+      "bin": {"step": 1},
+      "title": "Population density (thousand residents per km2)"
+    },
+    "y": {"aggregate": "count", "type": "quantitative", "title": "SA2 areas"},
+    "color": {
+      "field": "access_category",
+      "type": "nominal",
+      "title": "Access",
+      "scale": {"domain": ["Very low", "Low", "Moderate", "High"], "range": ["#b45145", "#e2a43a", "#6f9ec7", "#1f7a63"]},
+      "legend": {"orient": "bottom"}
+    },
+    "tooltip": [
+      {"aggregate": "count", "type": "quantitative", "title": "SA2 areas"},
+      {"field": "access_category", "title": "Access"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"gridColor": "#dfe5e3", "labelColor": "#4b5658", "titleColor": "#293233"},
+    "legend": {"labelColor": "#293233", "titleColor": "#293233", "orient": "bottom"}
+  }
+}

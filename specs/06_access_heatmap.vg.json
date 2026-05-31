@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Annotated heatmap crossing growth category with access category.",
+  "width": "container",
+  "height": 280,
+  "background": "transparent",
+  "data": {"url": "data/access_heatmap.csv"},
+  "transform": [
+    {
+      "calculate": "format(datum.population / 1000, '.0f') + 'k residents'",
+      "as": "population_label"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "rect", "cornerRadius": 2},
+      "encoding": {
+        "x": {
+          "field": "access_category",
+          "type": "ordinal",
+          "title": "Access category",
+          "sort": ["Very low", "Low", "Moderate", "High"]
+        },
+        "y": {
+          "field": "growth_category",
+          "type": "ordinal",
+          "title": "Growth category",
+          "sort": ["Rapid growth", "Growing", "Stable", "Decline"]
+        },
+        "color": {
+          "field": "population",
+          "type": "quantitative",
+          "title": "Population in cell",
+          "scale": {"range": ["#f7faf8", "#f1cf8a", "#d65f5f", "#8d3b33"]}
+        },
+        "tooltip": [
+          {"field": "growth_category", "title": "Growth"},
+          {"field": "access_category", "title": "Access"},
+          {"field": "areas", "title": "SA2 areas", "format": ",.0f"},
+          {"field": "population", "title": "Population", "format": ",.0f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#293233"
+      },
+      "encoding": {
+        "x": {
+          "field": "access_category",
+          "type": "ordinal",
+          "sort": ["Very low", "Low", "Moderate", "High"]
+        },
+        "y": {
+          "field": "growth_category",
+          "type": "ordinal",
+          "sort": ["Rapid growth", "Growing", "Stable", "Decline"]
+        },
+        "text": {"field": "population_label"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.growth_category == 'Rapid growth' && (datum.access_category == 'Very low' || datum.access_category == 'Low')"}
+      ],
+      "mark": {
+        "type": "rect",
+        "fill": null,
+        "stroke": "#293233",
+        "strokeWidth": 2.2
+      },
+      "encoding": {
+        "x": {
+          "field": "access_category",
+          "type": "ordinal",
+          "sort": ["Very low", "Low", "Moderate", "High"]
+        },
+        "y": {
+          "field": "growth_category",
+          "type": "ordinal",
+          "sort": ["Rapid growth", "Growing", "Stable", "Decline"]
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"labelColor": "#4b5658", "titleColor": "#293233"},
+    "legend": {"labelColor": "#293233", "titleColor": "#293233"}
+  }
+}

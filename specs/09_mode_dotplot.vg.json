@@ -1,0 +1,38 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Dot plot showing train, tram and bus stop counts in the most populated SA2 areas.",
+  "width": "container",
+  "height": 320,
+  "background": "transparent",
+  "data": {"url": "data/melbourne_access.csv"},
+  "transform": [
+    {"filter": "datum.population_2025 >= 3000"},
+    {"window": [{"op": "rank", "as": "pop_rank"}], "sort": [{"field": "population_2025", "order": "descending"}]},
+    {"filter": "datum.pop_rank <= 10"},
+    {
+      "fold": ["train_stops", "tram_stops", "bus_stops"],
+      "as": ["mode_field", "stops"]
+    },
+    {
+      "calculate": "datum.mode_field == 'train_stops' ? 'Train' : datum.mode_field == 'tram_stops' ? 'Tram' : 'Bus/coach'",
+      "as": "mode"
+    }
+  ],
+  "mark": {"type": "circle", "filled": true, "size": 115, "opacity": 0.86},
+  "encoding": {
+    "y": {"field": "sa2_name", "type": "nominal", "sort": "-x", "title": null, "axis": {"labelLimit": 200}},
+    "x": {"field": "stops", "type": "quantitative", "title": "Stop count"},
+    "color": {"field": "mode", "type": "nominal", "title": "Mode", "scale": {"domain": ["Train", "Tram", "Bus/coach"], "range": ["#5f8fb8", "#bf554b", "#1d6f5a"]}},
+    "tooltip": [
+      {"field": "sa2_name", "title": "SA2"},
+      {"field": "mode", "title": "Mode"},
+      {"field": "stops", "title": "Stops", "format": ",.0f"},
+      {"field": "population_2025", "title": "Population", "format": ",.0f"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"gridColor": "#dfe5e3", "labelColor": "#4b5658", "titleColor": "#293233"},
+    "legend": {"labelColor": "#293233", "titleColor": "#293233"}
+  }
+}

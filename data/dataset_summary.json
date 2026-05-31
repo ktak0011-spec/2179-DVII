@@ -1,0 +1,26 @@
+{
+  "sa2_areas": 361,
+  "gtfs_stops_read": 28189,
+  "gtfs_stops_assigned_to_greater_melbourne_sa2": 21036,
+  "gtfs_stops_outside_greater_melbourne_by_mode": {
+    "Train": 71,
+    "Bus": 7082
+  },
+  "clean_files": [
+    "data\\melbourne_access.csv",
+    "data\\map_access.geojson",
+    "data\\map_access.topojson",
+    "data\\map_points.csv",
+    "data\\map_outline.csv",
+    "assets\\melbourne_access_map.svg",
+    "data\\access_rankings.csv",
+    "data\\area_summary.csv",
+    "data\\mode_summary.csv",
+    "data\\access_heatmap.csv",
+    "data\\population_timeseries.csv"
+  ],
+  "source_notes": [
+    "ABS SA2 Regional Population 2024-25 FeatureServer, queried for Greater Melbourne.",
+    "PTV/Transport Victoria GTFS Schedule downloaded from https://data.ptv.vic.gov.au/downloads/gtfs.zip; branches 1, 2, 3, 4, 5 and 6 used for train, tram, bus and coach stop locations."
+  ]
+}

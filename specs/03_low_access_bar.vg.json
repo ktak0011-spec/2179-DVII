@@ -1,0 +1,87 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Annotated horizontal bar chart ranking the lowest-access Greater Melbourne SA2 areas.",
+  "width": "container",
+  "height": 380,
+  "background": "transparent",
+  "data": {"url": "data/access_rankings.csv"},
+  "transform": [
+    {"filter": "datum.rank_type == 'Lowest access'"},
+    {
+      "calculate": "datum.population_growth_pct_2024_25 >= 6 ? 'Rapid growth warning' : datum.growth_category",
+      "as": "bar_group"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "bar", "cornerRadiusEnd": 3},
+      "encoding": {
+        "y": {
+          "field": "sa2_name",
+          "type": "nominal",
+          "sort": {"field": "rank", "order": "ascending"},
+          "title": null,
+          "axis": {"labelLimit": 180}
+        },
+        "x": {
+          "field": "stops_per_10000_people",
+          "type": "quantitative",
+          "title": "Stops per 10,000 residents"
+        },
+        "color": {
+          "field": "bar_group",
+          "type": "nominal",
+          "title": "Growth context",
+          "scale": {
+            "domain": ["Decline", "Stable", "Growing", "Rapid growth warning"],
+            "range": ["#8a8f91", "#8fb8aa", "#e2a43a", "#b45145"]
+          }
+        },
+        "tooltip": [
+          {"field": "sa2_name", "title": "SA2"},
+          {"field": "population_2025", "title": "Population", "format": ",.0f"},
+          {"field": "population_growth_pct_2024_25", "title": "Growth", "format": ".1f"},
+          {"field": "total_stops", "title": "Stops", "format": ",.0f"},
+          {"field": "stops_per_10000_people", "title": "Stops per 10,000", "format": ".2f"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.population_growth_pct_2024_25 >= 6"},
+        {
+          "calculate": "'+' + format(datum.population_growth_pct_2024_25, '.1f') + '% growth'",
+          "as": "growth_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 6,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#8d3b33"
+      },
+      "encoding": {
+        "y": {
+          "field": "sa2_name",
+          "type": "nominal",
+          "sort": {"field": "rank", "order": "ascending"},
+          "title": null
+        },
+        "x": {
+          "field": "stops_per_10000_people",
+          "type": "quantitative",
+          "title": "Stops per 10,000 residents"
+        },
+        "text": {"field": "growth_label"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"gridColor": "#dfe5e3", "labelColor": "#4b5658", "titleColor": "#293233"},
+    "legend": {"labelColor": "#293233", "titleColor": "#293233"}
+  }
+}

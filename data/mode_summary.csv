@@ -1,0 +1,10 @@
+area_band,mode,stops,stops_per_10000_people
+Inner Melbourne,Train,105,0.67
+Inner Melbourne,Tram,1476,9.39
+Inner Melbourne,Bus/coach,4527,28.78
+Middle ring,Train,30,0.5
+Middle ring,Tram,79,1.32
+Middle ring,Bus/coach,2294,38.45
+Outer / growth corridor,Train,110,0.34
+Outer / growth corridor,Tram,71,0.22
+Outer / growth corridor,Bus/coach,12236,37.46

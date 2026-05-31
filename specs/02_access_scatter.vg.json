@@ -1,0 +1,182 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Clearer scatter plot of population density versus public transport stops per resident, with low-access growth areas highlighted.",
+  "width": "container",
+  "height": 470,
+  "background": "transparent",
+  "data": {
+    "url": "data/melbourne_access.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.population_2025 >= 3000 && datum.total_stops > 0"
+    },
+    {
+      "calculate": "datum.population_density_2025 / 1000",
+      "as": "density_thousands"
+    },
+    {
+      "calculate": "datum.stops_per_10000_people < 20 && datum.population_growth_pct_2024_25 >= 6 ? 'Rapid growth + low access' : datum.stops_per_10000_people < 20 ? 'Low access' : 'Other SA2 areas'",
+      "as": "risk_group"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "fill": "#fff2ef",
+        "stroke": "#e0b7af",
+        "strokeDash": [4, 4],
+        "opacity": 0.65
+      },
+      "encoding": {
+        "x": {"datum": 0.01},
+        "x2": {"datum": 45},
+        "y": {"datum": 3},
+        "y2": {"datum": 20}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "density_thousands": 26,
+            "stops_per_10000_people": 17,
+            "label": "Low-access zone"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "fontSize": 13,
+        "fontWeight": 700,
+        "color": "#8d3b33"
+      },
+      "encoding": {
+        "x": {"field": "density_thousands", "type": "quantitative"},
+        "y": {"field": "stops_per_10000_people", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "filled": true,
+        "size": 42,
+        "stroke": "#ffffff",
+        "strokeWidth": 0.35,
+        "opacity": 0.62
+      },
+      "encoding": {
+        "x": {
+          "field": "density_thousands",
+          "type": "quantitative",
+          "title": "Population density, 2025 (thousand residents per km2)",
+          "scale": {"type": "symlog", "constant": 1, "domain": [0, 45]},
+          "axis": {"tickCount": 8}
+        },
+        "y": {
+          "field": "stops_per_10000_people",
+          "type": "quantitative",
+          "title": "Stops per 10,000 residents",
+          "scale": {"type": "log", "domain": [3, 200]},
+          "axis": {"tickCount": 7}
+        },
+        "color": {
+          "field": "risk_group",
+          "type": "nominal",
+          "title": "Access risk",
+          "scale": {
+            "domain": ["Rapid growth + low access", "Low access", "Other SA2 areas"],
+            "range": ["#b45145", "#e2a43a", "#98aaa6"]
+          }
+        },
+        "tooltip": [
+          {"field": "sa2_name", "title": "SA2"},
+          {"field": "area_band", "title": "Area type"},
+          {"field": "population_2025", "title": "Population", "format": ",.0f"},
+          {"field": "population_density_2025", "title": "Density per km2", "format": ",.1f"},
+          {"field": "population_growth_pct_2024_25", "title": "Growth 2024-25", "format": ".1f"},
+          {"field": "total_stops", "title": "Stops", "format": ",.0f"},
+          {"field": "stops_per_10000_people", "title": "Stops per 10,000", "format": ".2f"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.stops_per_10000_people < 20 && datum.population_growth_pct_2024_25 >= 6"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "filled": false,
+        "size": 170,
+        "stroke": "#1f292b",
+        "strokeWidth": 1.3,
+        "opacity": 0.9
+      },
+      "encoding": {
+        "x": {
+          "field": "density_thousands",
+          "type": "quantitative",
+          "scale": {"type": "symlog", "constant": 1, "domain": [0, 45]}
+        },
+        "y": {
+          "field": "stops_per_10000_people",
+          "type": "quantitative",
+          "scale": {"type": "log", "domain": [3, 200]}
+        },
+        "tooltip": [
+          {"field": "sa2_name", "title": "Highlighted SA2"},
+          {"field": "population_growth_pct_2024_25", "title": "Growth", "format": ".1f"},
+          {"field": "stops_per_10000_people", "title": "Stops per 10,000", "format": ".2f"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "indexof(['Fraser Rise - Plumpton', 'Tarneit - North', 'Rockbank - Mount Cottrell', 'Tarneit (West) - Mount Cottrell'], datum.sa2_name) >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 8,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#293233"
+      },
+      "encoding": {
+        "x": {
+          "field": "density_thousands",
+          "type": "quantitative",
+          "scale": {"type": "symlog", "constant": 1, "domain": [0, 45]}
+        },
+        "y": {
+          "field": "stops_per_10000_people",
+          "type": "quantitative",
+          "scale": {"type": "log", "domain": [3, 200]}
+        },
+        "text": {"field": "sa2_name"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {
+      "gridColor": "#dfe5e3",
+      "labelColor": "#4b5658",
+      "titleColor": "#293233"
+    },
+    "legend": {
+      "labelColor": "#293233",
+      "titleColor": "#293233",
+      "orient": "right"
+    }
+  }
+}

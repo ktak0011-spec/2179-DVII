@@ -1,0 +1,362 @@
+sa2_code,sa2_name,area_band,longitude,latitude,population_2025,population_growth_pct_2024_25,stops_per_10000_people,total_stops,access_category
+206011107,Brunswick West,Inner Melbourne,144.942547,-37.763307,15988,2.9,55.04,88,High
+206011109,Pascoe Vale South,Inner Melbourne,144.93847,-37.743432,10907,0.7,45.84,50,High
+206011495,Brunswick - North,Inner Melbourne,144.963041,-37.760616,15255,5.4,38.68,59,Moderate
+206011496,Brunswick - South,Inner Melbourne,144.959715,-37.771549,15366,1.9,44.25,68,Moderate
+206011497,Coburg - East,Inner Melbourne,144.971852,-37.745621,14457,4.1,57.41,83,High
+206011498,Coburg - West,Inner Melbourne,144.955221,-37.743969,14989,1.5,36.03,54,Moderate
+206021110,Alphington - Fairfield,Inner Melbourne,145.02468,-37.77445,9749,1,59.49,58,High
+206021112,Thornbury,Inner Melbourne,145.00639,-37.758151,20234,1.7,39.54,80,Moderate
+206021499,Northcote - East,Inner Melbourne,145.006709,-37.774262,15969,0.8,43.83,70,Moderate
+206021500,Northcote - West,Inner Melbourne,144.991404,-37.769471,11026,1.4,37.18,41,Moderate
+206031113,Ascot Vale,Inner Melbourne,144.913686,-37.776963,16398,2,41.47,68,Moderate
+206031115,Flemington,Inner Melbourne,144.930909,-37.783815,9935,-2.7,29.19,29,Moderate
+206031116,Moonee Ponds,Inner Melbourne,144.921436,-37.765613,17965,1.2,49.54,89,High
+206031501,Essendon (West) - Aberfeldie,Inner Melbourne,144.899092,-37.750129,17119,0.1,41.47,71,Moderate
+206031502,Essendon - East,Inner Melbourne,144.919277,-37.751271,13196,2.5,63.66,84,High
+206041117,Carlton,Inner Melbourne,144.967804,-37.8005,25267,6.4,21.37,54,Moderate
+206041118,Docklands,Inner Melbourne,144.943286,-37.817948,19139,4,22.99,44,Moderate
+206041119,East Melbourne,Inner Melbourne,144.981484,-37.817141,5245,1.5,87.7,46,High
+206041120,Flemington Racecourse,Inner Melbourne,144.912584,-37.787986,78,0,769.23,6,High
+206041121,Kensington (Vic.),Inner Melbourne,144.927074,-37.794318,12423,6.9,14.49,18,Low
+206041124,Parkville,Inner Melbourne,144.951539,-37.787092,8280,1.2,62.8,52,High
+206041125,South Yarra - West,Inner Melbourne,144.981876,-37.839429,6894,0,47.87,33,High
+206041127,West Melbourne - Industrial,Inner Melbourne,144.922049,-37.810109,0,0,0,18,Very low
+206041503,Melbourne CBD - East,Inner Melbourne,144.968593,-37.812787,14266,5,23.13,33,Moderate
+206041504,Melbourne CBD - North,Inner Melbourne,144.960884,-37.809191,24296,3.9,11.94,29,Low
+206041505,Melbourne CBD - West,Inner Melbourne,144.958708,-37.816738,22163,3.9,29.78,66,Moderate
+206041506,North Melbourne,Inner Melbourne,144.945126,-37.798656,19286,1.1,30.59,59,Moderate
+206041507,Royal Botanic Gardens Victoria,Inner Melbourne,144.976706,-37.82775,0,0,0,8,Very low
+206041508,Southbank (West) - South Wharf,Inner Melbourne,144.956364,-37.82423,8122,4.4,17.24,14,Low
+206041509,Southbank - East,Inner Melbourne,144.966122,-37.826357,19552,1.4,10.23,20,Low
+206041510,West Melbourne - Residential,Inner Melbourne,144.949764,-37.80858,9699,5,20.62,20,Moderate
+206051128,Albert Park,Inner Melbourne,144.964055,-37.845624,17253,0.9,35.94,62,Moderate
+206051129,Elwood,Inner Melbourne,144.98554,-37.880909,16056,1.1,26.78,43,Moderate
+206051130,Port Melbourne,Inner Melbourne,144.935057,-37.838058,16927,0.7,33.67,57,Moderate
+206051134,St Kilda East,Inner Melbourne,144.998188,-37.867068,17380,0.8,27.62,48,Moderate
+206051511,Port Melbourne Industrial,Inner Melbourne,144.919851,-37.831053,3148,22.6,174.71,55,High
+206051512,South Melbourne,Inner Melbourne,144.959755,-37.83465,13132,2.4,29.7,39,Moderate
+206051513,St Kilda - Central,Inner Melbourne,144.986155,-37.863991,14012,2.7,36.4,51,Moderate
+206051514,St Kilda - West,Inner Melbourne,144.976268,-37.861345,16298,2.2,31.91,52,Moderate
+206061135,Armadale,Inner Melbourne,145.020711,-37.856747,10032,1,62.8,63,High
+206061136,Prahran - Windsor,Inner Melbourne,144.998058,-37.852837,21112,1.6,35.52,75,Moderate
+206061138,Toorak,Inner Melbourne,145.017627,-37.8416,13610,1.3,41.88,57,Moderate
+206061515,South Yarra - North,Inner Melbourne,144.996501,-37.836146,13779,1.9,17.42,24,Low
+206061516,South Yarra - South,Inner Melbourne,144.994899,-37.843171,10440,-0.1,28.74,30,Moderate
+206071139,Abbotsford,Inner Melbourne,144.999766,-37.804585,10316,1.1,20.36,21,Moderate
+206071140,Carlton North - Princes Hill,Inner Melbourne,144.968132,-37.785698,8828,1.7,41.91,37,Moderate
+206071141,Collingwood,Inner Melbourne,144.988143,-37.802078,11383,3.2,17.57,20,Low
+206071142,Fitzroy,Inner Melbourne,144.979139,-37.801031,12135,2.1,28.84,35,Moderate
+206071143,Fitzroy North,Inner Melbourne,144.984309,-37.784065,13749,1,48.73,67,High
+211031266,Ringwood,Outer / growth corridor,145.233373,-37.81141,19779,0.9,57.64,114,High
+206011106,Brunswick East,Inner Melbourne,144.977674,-37.76889,14693,2.5,31.99,47,Moderate
+206071145,Clifton Hill - Alphington,Inner Melbourne,145.012968,-37.789827,11419,1.8,28.9,33,Moderate
+206071517,Richmond (South) - Cremorne,Inner Melbourne,145.004628,-37.826493,19225,0.7,27.05,52,Moderate
+206071518,Richmond - North,Inner Melbourne,145.002771,-37.814869,15303,0.7,20.26,31,Moderate
+207011146,Ashburton (Vic.),Inner Melbourne,145.080578,-37.867376,8471,1.3,33.05,28,Moderate
+207011147,Balwyn,Inner Melbourne,145.080563,-37.809792,16868,-0.2,36.16,61,Moderate
+207011148,Balwyn North,Inner Melbourne,145.0839,-37.791877,22454,0.8,48.1,108,High
+207011149,Camberwell,Inner Melbourne,145.074023,-37.838429,22052,0,51.24,113,High
+207011150,Glen Iris - East,Inner Melbourne,145.072006,-37.854731,17650,0.9,27.76,49,Moderate
+207011152,Hawthorn East,Inner Melbourne,145.049912,-37.83127,17541,1.7,21.66,38,Moderate
+207011154,Kew East,Inner Melbourne,145.052391,-37.790554,6759,0.2,60.66,41,High
+207011155,Surrey Hills (West) - Canterbury,Inner Melbourne,145.084039,-37.824487,16229,0.2,41.28,67,Moderate
+207011519,Hawthorn - North,Inner Melbourne,145.028548,-37.818,10910,1.4,20.16,22,Moderate
+207011520,Hawthorn - South,Inner Melbourne,145.033897,-37.829265,13562,1.3,33.18,45,Moderate
+207011521,Kew - South,Inner Melbourne,145.046576,-37.808738,12306,0,54.44,67,High
+207011522,Kew - West,Inner Melbourne,145.023986,-37.799751,13799,1.3,36.96,51,Moderate
+207021156,Bulleen,Inner Melbourne,145.087186,-37.768872,11810,0.7,50.8,60,High
+207021157,Doncaster,Inner Melbourne,145.123858,-37.784815,28353,1.9,36.33,103,Moderate
+207021159,Templestowe,Inner Melbourne,145.148639,-37.754034,17442,0.1,62.49,109,High
+207021160,Templestowe Lower,Inner Melbourne,145.112278,-37.763855,14695,0.7,42.87,63,Moderate
+207021424,Doncaster East - North,Inner Melbourne,145.169262,-37.769426,16642,2.1,45.07,75,High
+211031267,Ringwood East,Outer / growth corridor,145.248683,-37.821477,22164,1.6,23.91,53,Moderate
+207021425,Doncaster East - South,Inner Melbourne,145.156697,-37.791499,16983,2,35.92,61,Moderate
+211031268,Ringwood North,Outer / growth corridor,145.230693,-37.794637,9839,0.6,56.92,56,High
+211031450,Croydon - East,Outer / growth corridor,145.291232,-37.801007,17345,1.2,43.24,75,Moderate
+207031161,Blackburn,Inner Melbourne,145.152914,-37.816545,23732,1.4,51.83,123,High
+207031162,Blackburn South,Inner Melbourne,145.146546,-37.839345,11072,0.1,42.45,47,Moderate
+207031163,Box Hill,Inner Melbourne,145.124747,-37.829025,27206,2.4,52.56,143,High
+207031164,Box Hill North,Inner Melbourne,145.122697,-37.804679,19760,1.8,43.52,86,Moderate
+207031165,Burwood (Vic.),Inner Melbourne,145.112951,-37.848051,15480,4.2,48.45,75,High
+207031166,Burwood East,Inner Melbourne,145.150421,-37.853573,12460,1.1,51.36,64,High
+207031167,Surrey Hills (East) - Mont Albert,Inner Melbourne,145.106901,-37.824282,10776,0.5,28.77,31,Moderate
+208011168,Beaumaris,Inner Melbourne,145.037756,-37.98079,14486,0.8,51.77,75,High
+208011169,Brighton (Vic.),Inner Melbourne,144.995822,-37.908176,24340,1.2,47.25,115,High
+208011170,Brighton East,Inner Melbourne,145.016311,-37.917136,17486,1.5,33.17,58,Moderate
+208011171,Highett (West) - Cheltenham,Inner Melbourne,145.037969,-37.957433,13257,1.4,56.57,75,High
+208011172,Hampton,Inner Melbourne,145.014253,-37.937648,19524,2,42.51,83,Moderate
+208011173,Sandringham - Black Rock,Inner Melbourne,145.017111,-37.960839,18071,0.5,38.18,69,Moderate
+208021174,Bentleigh - McKinnon,Inner Melbourne,145.037977,-37.919464,26966,0.8,27.44,74,Moderate
+208021176,Carnegie,Inner Melbourne,145.055904,-37.893377,21266,2.1,34.33,73,Moderate
+208021177,Caulfield - North,Inner Melbourne,145.02291,-37.873867,24635,1,42.22,104,Moderate
+208021178,Caulfield - South,Inner Melbourne,145.025368,-37.891367,19226,1.6,43.69,84,Moderate
+208021179,Elsternwick,Inner Melbourne,145.007206,-37.886949,12827,1,53.01,68,High
+208021180,Hughesdale,Inner Melbourne,145.081142,-37.899467,8132,1,40.58,33,Moderate
+208021181,Murrumbeena,Inner Melbourne,145.070374,-37.896824,10126,1.2,44.44,45,Moderate
+208021182,Ormond - Glen Huntly,Inner Melbourne,145.041429,-37.900354,15157,3.2,27.05,41,Moderate
+208021426,Bentleigh East - North,Inner Melbourne,145.068055,-37.91481,17873,2.1,39.72,71,Moderate
+208021427,Bentleigh East - South,Inner Melbourne,145.065333,-37.9294,14949,1.4,54.85,82,High
+208031183,Aspendale Gardens - Waterways,Inner Melbourne,145.123082,-38.019086,9063,0,25.38,23,Moderate
+208031184,Braeside,Inner Melbourne,145.122238,-37.998007,28,0,16785.71,47,High
+208031185,Carrum - Patterson Lakes,Inner Melbourne,145.139199,-38.071293,12478,0.5,45.68,57,High
+208031186,Chelsea - Bonbeach,Inner Melbourne,145.124618,-38.056584,16058,1.4,29.27,47,Moderate
+208031187,Chelsea Heights,Inner Melbourne,145.134243,-38.04083,5445,0.3,75.3,41,High
+208031188,Highett (East) - Cheltenham ,Inner Melbourne,145.066086,-37.961166,26320,2,43.69,115,Moderate
+208031189,Edithvale - Aspendale,Inner Melbourne,145.107484,-38.028217,14365,1.8,33.41,48,Moderate
+208031190,Mentone,Inner Melbourne,145.069054,-37.981631,14155,1.5,43.09,61,Moderate
+208031191,Moorabbin - Heatherton,Inner Melbourne,145.07933,-37.950331,9826,1.5,87.52,86,High
+208031192,Moorabbin Airport,Inner Melbourne,145.099524,-37.977443,26,0,3461.54,9,High
+208031193,Mordialloc - Parkdale,Inner Melbourne,145.08945,-37.995992,22437,1.1,37.44,84,Moderate
+208041194,Malvern - Glen Iris,Inner Melbourne,145.042275,-37.856404,21820,1.1,41.7,91,Moderate
+208041195,Malvern East,Inner Melbourne,145.065854,-37.876823,23996,1.4,40.01,96,Moderate
+209011196,Bundoora - East,Middle ring,145.068338,-37.698802,10339,1.4,41.59,43,Moderate
+209011197,Greensborough,Middle ring,145.113901,-37.700088,21386,0.5,46.29,99,High
+209011198,Heidelberg - Rosanna,Middle ring,145.06966,-37.7457,16925,0.4,42.54,72,Moderate
+209011199,Heidelberg West,Middle ring,145.046412,-37.742979,17224,3.5,59.8,103,High
+212031308,Pearcedale - Tooradin,Outer / growth corridor,145.311572,-38.20444,8272,0.6,56.82,47,High
+209011200,Ivanhoe,Middle ring,145.043085,-37.76902,13188,0.5,41.7,55,Moderate
+212031457,Narre Warren South - East,Outer / growth corridor,145.312578,-38.059016,13022,0.2,31.49,41,Moderate
+209011201,Ivanhoe East - Eaglemont,Middle ring,145.062799,-37.768557,8169,1.2,30.6,25,Moderate
+212031458,Narre Warren South - West,Outer / growth corridor,145.292052,-38.050084,17083,0,39.81,68,Moderate
+212031555,Clyde North - North,Outer / growth corridor,145.357535,-38.084846,13667,4.3,19.02,26,Low
+209011202,Montmorency - Briar Hill,Middle ring,145.119695,-37.728844,17042,0.7,33.45,57,Moderate
+209011203,Viewbank - Yallambie,Middle ring,145.088247,-37.73121,18993,0.5,34.75,66,Moderate
+209011204,Watsonia,Middle ring,145.084153,-37.704893,9504,0.2,55.77,53,High
+209021205,Kingsbury,Middle ring,145.049049,-37.714548,12932,3.8,53.36,69,High
+209021428,Preston - East,Middle ring,145.016007,-37.742747,23403,4.1,63.24,148,High
+209021429,Preston - West,Middle ring,144.990071,-37.739927,13610,1.5,37.47,51,Moderate
+212031556,Clyde North - South,Outer / growth corridor,145.36362,-38.107625,28328,15.4,31.06,88,Moderate
+212031557,Cranbourne East - North,Outer / growth corridor,145.312906,-38.102232,25111,0.2,25.89,65,Moderate
+209021523,Reservoir - North East,Middle ring,145.021214,-37.705936,16329,2.6,36.74,60,Moderate
+212031558,Cranbourne East - South,Outer / growth corridor,145.304225,-38.122484,15590,3.6,8.34,13,Very low
+209021524,Reservoir - North West,Middle ring,144.99399,-37.699953,9751,-0.6,68.71,67,High
+209021525,Reservoir - South East,Middle ring,145.022024,-37.725337,14143,2.3,70.71,100,High
+212031559,Cranbourne North - East,Outer / growth corridor,145.31544,-38.079542,13691,0.5,21.18,29,Moderate
+209021526,Reservoir - South West,Middle ring,144.993937,-37.717804,15350,1.6,68.4,105,High
+209031209,Eltham,Middle ring,145.156825,-37.714696,23669,0.7,29.15,69,Moderate
+212031560,Cranbourne North - West,Outer / growth corridor,145.279932,-38.075131,12313,0.1,38.98,48,Moderate
+209031210,Hurstbridge,Middle ring,145.194343,-37.637567,3521,0.1,11.36,4,Low
+212031561,Hampton Park - East,Outer / growth corridor,145.275274,-38.043449,13393,0.3,37.33,50,Moderate
+212031562,Hampton Park - West,Outer / growth corridor,145.257903,-38.030809,13748,0.2,40.01,55,Moderate
+212041309,Clarinda - Oakleigh South,Outer / growth corridor,145.099056,-37.938551,11741,0.1,47.7,56,High
+209031211,Kinglake,Middle ring,145.408299,-37.49105,4419,1.1,56.57,25,High
+209031212,Panton Hill - St Andrews,Middle ring,145.264766,-37.595852,5130,0.1,3.9,2,Very low
+209031213,Plenty - Yarrambat,Middle ring,145.12385,-37.653509,9579,-0.1,58.46,56,High
+209031214,Research - North Warrandyte,Middle ring,145.220622,-37.698993,7039,0.3,82.4,58,High
+209031215,Wattle Glen - Diamond Creek,Middle ring,145.167309,-37.667728,14859,0.6,31.63,47,Moderate
+209041216,Bundoora - North,Middle ring,145.071201,-37.682811,8014,0.6,44.92,36,Moderate
+209041217,Bundoora - West,Middle ring,145.052585,-37.692903,6806,1.3,24.98,17,Moderate
+212041310,Clayton South,Outer / growth corridor,145.12522,-37.943048,15349,1.8,44.95,69,Moderate
+209041220,Mill Park - North,Middle ring,145.067717,-37.659507,17610,-0.3,60.19,106,High
+209041221,Mill Park - South,Middle ring,145.059237,-37.671389,11494,1.8,40.02,46,Moderate
+209041223,Thomastown,Middle ring,145.008281,-37.683841,20595,0.5,55.35,114,High
+209041224,Wallan,Middle ring,145.071564,-37.384808,30342,7.1,15.49,47,Low
+209041225,Whittlesea,Middle ring,145.101963,-37.497915,18174,15.3,34.66,63,Moderate
+209041431,Epping - East,Middle ring,145.045395,-37.635776,13555,0.8,33.94,46,Moderate
+209041432,Epping - South,Middle ring,144.99652,-37.639201,8322,-0.7,88.92,74,High
+209041433,Epping (Vic.) - West,Middle ring,145.010056,-37.631928,12895,0.3,30.24,39,Moderate
+209041435,South Morang - North,Middle ring,145.082544,-37.623699,13259,1.8,37.71,50,Moderate
+209041436,South Morang - South,Middle ring,145.08559,-37.645714,13054,1.5,32.94,43,Moderate
+209041437,Wollert,Middle ring,145.005068,-37.590922,36658,9.5,10.09,37,Low
+209041527,Doreen - North,Middle ring,145.126848,-37.588178,17283,0.6,31.82,55,Moderate
+209041528,Doreen - South,Middle ring,145.121075,-37.611432,11947,1.4,27.62,33,Moderate
+209041529,Lalor - East,Middle ring,145.028365,-37.668963,10253,0.9,39.99,41,Moderate
+209041530,Lalor - West,Middle ring,144.994623,-37.660576,13925,0.3,29.44,41,Moderate
+209041531,Mernda - North,Middle ring,145.085507,-37.584237,12061,0.5,29.02,35,Moderate
+209041532,Mernda - South,Middle ring,145.075588,-37.605898,13854,2.8,33.2,46,Moderate
+210011226,Airport West,Outer / growth corridor,144.881305,-37.723808,8783,2,64.9,57,High
+210011227,Essendon Airport,Outer / growth corridor,144.900415,-37.726894,14,0,3571.43,5,High
+210011228,Keilor,Outer / growth corridor,144.844464,-37.718933,8732,0.7,75.58,66,High
+210011230,Niddrie - Essendon West,Outer / growth corridor,144.884898,-37.744984,8048,1.9,50.94,41,High
+210011231,Strathmore,Outer / growth corridor,144.91368,-37.729916,10536,1,49.35,52,High
+210011533,Avondale Heights,Outer / growth corridor,144.862612,-37.761538,12861,0.5,34.99,45,Moderate
+210011534,Keilor East,Outer / growth corridor,144.866119,-37.742174,15645,1.2,40.27,63,Moderate
+210021232,Gisborne,Outer / growth corridor,144.555206,-37.495476,15959,3.6,47.0,75,High
+210021233,Macedon,Outer / growth corridor,144.57326,-37.41192,3615,-0.2,5.53,2,Very low
+210021234,Riddells Creek,Outer / growth corridor,144.67771,-37.438244,4589,1.5,8.72,4,Very low
+210021235,Romsey,Outer / growth corridor,144.763513,-37.34999,11567,0.9,12.97,15,Low
+210031236,Coburg North,Outer / growth corridor,144.967462,-37.726978,8932,0.6,64.94,58,High
+210031237,Fawkner,Outer / growth corridor,144.969612,-37.705222,15096,1.3,50.34,76,High
+210031439,Gowanbrae,Outer / growth corridor,144.897557,-37.702788,3215,1.3,52.88,17,High
+210031440,Hadfield,Outer / growth corridor,144.950304,-37.710095,6650,0.4,49.62,33,High
+210031535,Glenroy - East,Outer / growth corridor,144.934959,-37.701934,15762,0.6,41.24,65,Moderate
+210031536,Glenroy - West,Outer / growth corridor,144.909668,-37.705085,9563,0.5,24.05,23,Moderate
+210031537,Oak Park,Outer / growth corridor,144.917898,-37.719591,8559,1.3,24.54,21,Moderate
+210031538,Pascoe Vale,Outer / growth corridor,144.938905,-37.724526,18674,1.7,38.02,71,Moderate
+210041240,Sunbury,Outer / growth corridor,144.767583,-37.539426,15364,4.1,42.96,66,Moderate
+210041539,Diggers Rest,Outer / growth corridor,144.682482,-37.615983,7434,7,41.7,31,Moderate
+210041540,Sunbury - South,Outer / growth corridor,144.737903,-37.613628,17683,5.4,58.25,103,High
+210041541,Sunbury - West,Outer / growth corridor,144.672081,-37.538105,11497,1.1,61.76,71,High
+210051242,Broadmeadows,Outer / growth corridor,144.929328,-37.684069,14972,1.6,58.78,88,High
+210051243,Campbellfield - Coolaroo,Outer / growth corridor,144.95185,-37.663907,16386,0,63.47,104,High
+210051245,Gladstone Park - Westmeadows,Outer / growth corridor,144.890804,-37.676258,18285,0.4,41.02,75,Moderate
+210051246,Greenvale - Bulla,Outer / growth corridor,144.835367,-37.623619,26757,4.2,30.65,82,Moderate
+210051247,Meadow Heights,Outer / growth corridor,144.91856,-37.651152,14841,-0.5,41.78,62,Moderate
+210051248,Melbourne Airport,Outer / growth corridor,144.836524,-37.676409,130,0,1153.85,15,High
+210051250,Tullamarine,Outer / growth corridor,144.877238,-37.696127,6727,0.9,44.6,30,Moderate
+210051441,Craigieburn - Central,Outer / growth corridor,144.935609,-37.592147,8172,0,28.14,23,Moderate
+212041312,Dandenong North,Outer / growth corridor,145.214247,-37.955902,23391,0.6,44.03,103,Moderate
+210051442,Craigieburn - North,Outer / growth corridor,144.943259,-37.570652,12846,0.1,23.35,30,Moderate
+210051443,Craigieburn - South,Outer / growth corridor,144.918807,-37.604432,24431,1.8,30.29,74,Moderate
+210051445,Mickleham - Yuroke,Outer / growth corridor,144.901915,-37.543581,39389,11.8,17.01,67,Low
+210051542,Craigieburn - North West,Outer / growth corridor,144.904538,-37.570776,11293,1.3,16.82,19,Low
+210051543,Craigieburn - West,Outer / growth corridor,144.904775,-37.585292,14970,1.8,35.4,53,Moderate
+212041313,Dingley Village,Outer / growth corridor,145.127138,-37.974891,10770,0.4,44.57,48,Moderate
+210051544,Roxburgh Park (South) - Somerton,Outer / growth corridor,144.94105,-37.633829,9699,0.1,52.58,51,High
+210051545,Roxburgh Park - North,Outer / growth corridor,144.924773,-37.618876,15440,0.4,14.25,22,Low
+212041316,Noble Park North,Outer / growth corridor,145.190835,-37.951237,7593,-0.4,59.27,45,High
+212041317,Springvale,Outer / growth corridor,145.157862,-37.945682,24468,1.9,34.74,85,Moderate
+211011251,Bayswater,Outer / growth corridor,145.264771,-37.845429,13388,0.9,49.3,66,High
+211011254,Knoxfield - Scoresby,Outer / growth corridor,145.23047,-37.897207,17232,0.8,66.74,115,High
+211011255,Lysterfield,Outer / growth corridor,145.290814,-37.926955,6622,0.6,37.75,25,Moderate
+211011256,Rowville - Central,Outer / growth corridor,145.243175,-37.91937,15771,0.5,47.56,75,High
+211011257,Rowville - North,Outer / growth corridor,145.260866,-37.907128,7827,-0.5,34.5,27,Moderate
+211011258,Rowville - South,Outer / growth corridor,145.238849,-37.935506,10578,0.1,34.03,36,Moderate
+212041318,Springvale South,Outer / growth corridor,145.147868,-37.970831,13274,1.2,36.91,49,Moderate
+212041459,Noble Park - East,Outer / growth corridor,145.181751,-37.96391,13935,2.2,22.25,31,Moderate
+211011259,Wantirna,Outer / growth corridor,145.225981,-37.85231,14634,0.2,32.12,47,Moderate
+211011260,Wantirna South,Outer / growth corridor,145.220921,-37.873638,18475,0.6,69.28,128,High
+212041460,Noble Park - West,Outer / growth corridor,145.172746,-37.973926,20473,1.1,25.4,52,Moderate
+211011446,Boronia,Outer / growth corridor,145.285971,-37.856278,24763,1,46.04,114,High
+211011447,Ferntree Gully - North,Outer / growth corridor,145.285565,-37.877292,14538,0.3,42.65,62,Moderate
+211011448,Ferntree Gully (South) - Upper Ferntree Gully,Outer / growth corridor,145.283818,-37.892811,15630,0.4,51.18,80,High
+211011449,The Basin,Outer / growth corridor,145.321379,-37.855674,4336,0.4,34.59,15,Moderate
+212041563,Dandenong - North,Outer / growth corridor,145.215474,-37.981274,23327,1.6,56.59,132,High
+211021261,Donvale - Park Orchards,Outer / growth corridor,145.203058,-37.784557,16894,0.9,50.91,86,High
+211021262,Warrandyte - Wonga Park,Outer / growth corridor,145.242884,-37.743079,10229,0.2,78.21,80,High
+211031263,Bayswater North,Outer / growth corridor,145.292897,-37.828466,12097,0.7,69.44,84,High
+211031265,Croydon Hills - Warranwood,Outer / growth corridor,145.26873,-37.77294,18457,0.6,37.93,70,Moderate
+212041564,Dandenong - South,Outer / growth corridor,145.208901,-38.037719,10039,0.5,128.5,129,High
+212041565,Keysborough - North,Outer / growth corridor,145.172063,-37.989957,15067,0.1,49.78,75,High
+211031451,Croydon - West,Outer / growth corridor,145.278441,-37.788863,14940,1,44.85,67,Moderate
+211031452,Croydon South,Outer / growth corridor,145.279329,-37.815073,5147,0.6,29.14,15,Moderate
+211041269,Forest Hill,Outer / growth corridor,145.171054,-37.839857,11256,0.7,46.2,52,High
+211041270,Mitcham (Vic.),Outer / growth corridor,145.199014,-37.818164,17496,0.4,53.16,93,High
+211041271,Nunawading,Outer / growth corridor,145.176536,-37.817349,13247,0.4,53.6,71,High
+211041272,Vermont,Outer / growth corridor,145.199297,-37.838419,11435,0.9,43.73,50,Moderate
+212041566,Keysborough - South,Outer / growth corridor,145.161651,-38.021375,17117,1.7,25.71,44,Moderate
+212051319,Ashwood - Chadstone,Outer / growth corridor,145.101458,-37.872414,21139,1.3,31.22,66,Moderate
+212051321,Glen Waverley - East,Outer / growth corridor,145.178322,-37.88151,22820,0.8,35.93,82,Moderate
+212051322,Glen Waverley - West,Outer / growth corridor,145.156076,-37.881689,23417,1.3,38.86,91,Moderate
+211041273,Vermont South,Outer / growth corridor,145.187823,-37.854374,12250,0.1,41.63,51,Moderate
+212051323,Mount Waverley - North,Outer / growth corridor,145.13024,-37.866447,17492,2,29.73,52,Moderate
+211051274,Belgrave - Selby,Outer / growth corridor,145.355154,-37.938717,9964,0.1,78.28,78,High
+211051275,Chirnside Park,Outer / growth corridor,145.314321,-37.738589,12603,1,30.95,39,Moderate
+211051276,Healesville - Yarra Glen,Outer / growth corridor,145.49619,-37.626122,14116,0.8,34.0,48,Moderate
+211051277,Kilsyth,Outer / growth corridor,145.320346,-37.815414,10692,0.4,51.44,55,High
+211051278,Lilydale - Coldstream,Outer / growth corridor,145.388832,-37.713786,20905,2,48.79,102,High
+211051279,Monbulk - Silvan,Outer / growth corridor,145.458734,-37.864069,5840,0.6,44.52,26,Moderate
+211051280,Montrose,Outer / growth corridor,145.347953,-37.811123,6904,0.2,56.49,39,High
+212051324,Mount Waverley - South,Outer / growth corridor,145.127209,-37.887251,20659,0.7,33.4,69,Moderate
+211051281,Mooroolbark,Outer / growth corridor,145.325678,-37.781325,24395,0.8,18.45,45,Low
+211051282,Mount Dandenong - Olinda,Outer / growth corridor,145.375686,-37.861828,9587,0.1,140.82,135,High
+211051283,Mount Evelyn,Outer / growth corridor,145.388217,-37.787278,10043,0.5,40.82,41,Moderate
+211051284,Upwey - Tecoma,Outer / growth corridor,145.330737,-37.904236,9867,0.4,53.71,53,High
+211051285,Wandin - Seville,Outer / growth corridor,145.463977,-37.760631,7996,0.3,32.52,26,Moderate
+211051286,Yarra Valley,Outer / growth corridor,145.680257,-37.767945,17087,0.4,46.23,79,High
+212011289,Emerald - Cockatoo,Outer / growth corridor,145.561645,-37.953135,19043,0.7,43.06,82,Moderate
+212011546,Beaconsfield - Officer,Outer / growth corridor,145.400398,-38.042338,29524,4.3,21.0,62,Moderate
+212011547,Bunyip - Garfield,Outer / growth corridor,145.646977,-38.079898,10366,1.4,12.54,13,Low
+212011548,Koo Wee Rup,Outer / growth corridor,145.551462,-38.207377,12598,5.1,3.97,5,Very low
+212011549,Pakenham - North East,Outer / growth corridor,145.506764,-38.053017,16593,1.7,26.52,44,Moderate
+212011550,Pakenham - North West,Outer / growth corridor,145.454028,-38.041632,10502,9.1,8.57,9,Very low
+212011551,Pakenham - South East,Outer / growth corridor,145.515504,-38.093845,6778,1.5,51.64,35,High
+212011552,Pakenham - South West,Outer / growth corridor,145.465075,-38.091601,28194,0.1,29.44,83,Moderate
+212021293,Berwick - North,Outer / growth corridor,145.348843,-38.025124,23637,-0.5,55.84,132,High
+212021295,Doveton,Outer / growth corridor,145.240206,-37.990589,12893,1.3,35.68,46,Moderate
+212021297,Hallam,Outer / growth corridor,145.268501,-38.007736,12009,0.9,47.46,57,High
+212021299,Narre Warren North,Outer / growth corridor,145.33041,-37.986296,8237,0.9,24.28,20,Moderate
+212021453,Endeavour Hills - North,Outer / growth corridor,145.258033,-37.959456,12175,0.5,44.35,54,Moderate
+212021454,Endeavour Hills - South,Outer / growth corridor,145.260803,-37.983364,13539,-0.2,55.4,75,High
+212021455,Narre Warren - North East,Outer / growth corridor,145.30943,-38.005042,13618,0.1,31.58,43,Moderate
+212021456,Narre Warren - South West,Outer / growth corridor,145.304085,-38.02479,15484,0.5,47.79,74,High
+212021553,Berwick - South East,Outer / growth corridor,145.356714,-38.064488,20765,4.1,32.27,67,Moderate
+212021554,Berwick - South West,Outer / growth corridor,145.33041,-38.054556,13243,3.9,20.39,27,Moderate
+212031300,Cranbourne,Outer / growth corridor,145.275715,-38.106883,22708,1.1,33.03,75,Moderate
+212031303,Cranbourne South,Outer / growth corridor,145.312927,-38.151434,27368,11.6,24.12,66,Moderate
+212031304,Cranbourne West,Outer / growth corridor,145.248408,-38.101835,25490,2.6,18.83,48,Low
+212031306,Lynbrook - Lyndhurst,Outer / growth corridor,145.253158,-38.062024,19545,0.9,23.54,46,Moderate
+212051325,Mulgrave,Outer / growth corridor,145.175877,-37.925669,21072,0.6,52.2,110,High
+212051326,Oakleigh - Huntingdale,Outer / growth corridor,145.101213,-37.908469,25427,1.6,58.21,148,High
+212051327,Wheelers Hill,Outer / growth corridor,145.186872,-37.907573,21281,0.2,49.34,105,High
+212051567,Clayton (North) - Notting Hill,Outer / growth corridor,145.138145,-37.910536,14911,6,49.63,74,High
+212051568,Clayton - Central,Outer / growth corridor,145.124733,-37.92267,15483,3.4,22.61,35,Moderate
+213011328,Ardeer - Albion,Outer / growth corridor,144.809606,-37.776137,7955,1,41.48,33,Moderate
+213011329,Cairnlea,Outer / growth corridor,144.787814,-37.759302,10035,0.3,14.95,15,Low
+213011331,Delahey,Outer / growth corridor,144.777326,-37.71979,7859,-1.5,38.17,30,Moderate
+213011332,Keilor Downs,Outer / growth corridor,144.812915,-37.726275,13080,0.3,50.46,66,High
+213011333,Kings Park (Vic.),Outer / growth corridor,144.770513,-37.739017,13956,0.5,37.98,53,Moderate
+213011334,St Albans - North,Outer / growth corridor,144.802395,-37.737151,21020,0.5,35.68,75,Moderate
+213011335,St Albans - South,Outer / growth corridor,144.807639,-37.753342,17705,0,30.5,54,Moderate
+213011336,Sunshine,Outer / growth corridor,144.834258,-37.789309,10151,0.9,94.57,96,High
+213011337,Sunshine North,Outer / growth corridor,144.836195,-37.763916,12751,2.3,33.72,43,Moderate
+213011338,Sunshine West,Outer / growth corridor,144.818281,-37.801995,18693,-0.2,52.96,99,High
+213011339,Sydenham,Outer / growth corridor,144.764249,-37.699783,12025,0.8,29.11,35,Moderate
+213011340,Taylors Lakes,Outer / growth corridor,144.785978,-37.688498,16896,-0.4,43.21,73,Moderate
+213011569,Deer Park,Outer / growth corridor,144.771295,-37.768649,18368,-0.2,37.57,69,Moderate
+213011570,Derrimut,Outer / growth corridor,144.776033,-37.798782,8958,0.9,26.79,24,Moderate
+213021341,Altona,Outer / growth corridor,144.815016,-37.860292,14428,1.7,49.9,72,High
+213021342,Altona Meadows,Outer / growth corridor,144.784441,-37.880977,18783,0.3,24.49,46,Moderate
+213021343,Altona North,Outer / growth corridor,144.836095,-37.835711,16493,4.1,75.18,124,High
+213021344,Newport,Outer / growth corridor,144.882228,-37.837615,20328,2.3,44.77,91,Moderate
+213021345,Seabrook,Outer / growth corridor,144.758662,-37.880908,4932,0,18.25,9,Low
+213021346,Williamstown,Outer / growth corridor,144.884796,-37.859115,17102,1.4,41.52,71,Moderate
+213031347,Braybrook,Outer / growth corridor,144.862997,-37.784675,20916,1.5,40.64,85,Moderate
+213031348,Footscray,Outer / growth corridor,144.897325,-37.798116,20882,1.3,54.11,113,High
+213031349,Maribyrnong,Outer / growth corridor,144.887768,-37.772676,13960,1.5,55.87,78,High
+213031350,Seddon - Kingsville,Outer / growth corridor,144.886347,-37.807654,9748,0.3,27.7,27,Moderate
+213031351,West Footscray - Tottenham,Outer / growth corridor,144.864512,-37.802015,13007,1,43.82,57,Moderate
+213031352,Yarraville,Outer / growth corridor,144.881977,-37.817963,16159,0,54.46,88,High
+213041353,Bacchus Marsh,Outer / growth corridor,144.454621,-37.637931,27182,2.5,29.8,81,Moderate
+213041358,Melton West,Outer / growth corridor,144.54261,-37.664858,22710,0.4,38.31,87,Moderate
+213041359,Rockbank - Mount Cottrell,Outer / growth corridor,144.667245,-37.760385,35856,14.7,12.55,45,Low
+213041360,Taylors Hill,Outer / growth corridor,144.749016,-37.714544,19874,0.3,21.64,43,Moderate
+213041461,Burnside,Outer / growth corridor,144.753032,-37.749199,6635,3.4,30.14,20,Moderate
+213041462,Burnside Heights,Outer / growth corridor,144.755638,-37.732218,6443,-0.3,21.73,14,Moderate
+213041463,Caroline Springs,Outer / growth corridor,144.737371,-37.738913,20934,-0.1,37.74,79,Moderate
+213041571,Brookfield,Outer / growth corridor,144.540556,-37.699329,10665,2.9,22.5,24,Moderate
+213041572,Cobblebank - Strathtulloh,Outer / growth corridor,144.598511,-37.722039,12885,10.2,10.09,13,Low
+213041573,Eynesbury - Exford,Outer / growth corridor,144.530969,-37.755069,4309,10.2,30.17,13,Moderate
+213041574,Fraser Rise - Plumpton,Outer / growth corridor,144.690822,-37.686998,24739,19.7,4.45,11,Very low
+213041575,Hillside,Outer / growth corridor,144.741093,-37.689954,16173,0.5,27.82,45,Moderate
+213041576,Kurunjang - Toolern Vale,Outer / growth corridor,144.593618,-37.616237,12082,0.4,30.62,37,Moderate
+213041577,Melton,Outer / growth corridor,144.595809,-37.68574,8007,-0.1,73.69,59,High
+213041578,Melton South - Weir Views,Outer / growth corridor,144.568466,-37.717853,22821,5.5,20.16,46,Moderate
+213051361,Hoppers Crossing - North,Outer / growth corridor,144.701263,-37.86243,18359,0,49.02,90,High
+213051362,Hoppers Crossing - South,Outer / growth corridor,144.685367,-37.873265,18906,0.1,45.49,86,High
+213051363,Laverton,Outer / growth corridor,144.778045,-37.839525,12816,1.1,70.22,90,High
+213051368,Werribee - South,Outer / growth corridor,144.652881,-37.951346,17936,0.4,42.93,77,Moderate
+213051464,Point Cook - East,Outer / growth corridor,144.770112,-37.91312,21797,1.9,15.6,34,Low
+213051466,Point Cook - South,Outer / growth corridor,144.733453,-37.911324,20835,1.7,10.56,22,Low
+213051467,Werribee - East,Outer / growth corridor,144.661957,-37.885164,19205,0.9,54.15,104,High
+213051468,Werribee - West,Outer / growth corridor,144.548486,-37.919645,32943,8.3,28.53,94,Moderate
+213051579,Manor Lakes - Quandong,Outer / growth corridor,144.518696,-37.848473,13667,9.2,10.24,14,Low
+213051580,Point Cook - North East,Outer / growth corridor,144.743585,-37.886446,14746,0,31.19,46,Moderate
+213051581,Point Cook - North West,Outer / growth corridor,144.726171,-37.885339,10151,0.4,15.76,16,Low
+213051582,Tarneit (West) - Mount Cottrell,Outer / growth corridor,144.624335,-37.824208,19169,12.3,9.91,19,Very low
+213051583,Tarneit - Central,Outer / growth corridor,144.680498,-37.840676,29246,-0.3,27.35,80,Moderate
+213051584,Tarneit - North,Outer / growth corridor,144.681615,-37.818148,15880,18.5,13.22,21,Low
+213051585,Tarneit - South,Outer / growth corridor,144.660963,-37.857759,11864,2,27.82,33,Moderate
+213051586,Truganina - North,Outer / growth corridor,144.736612,-37.824046,15384,8.3,24.7,38,Moderate
+213051587,Truganina - South East,Outer / growth corridor,144.742704,-37.847693,10846,2,22.13,24,Moderate
+213051588,Truganina - South West,Outer / growth corridor,144.720908,-37.849556,20395,0.7,18.63,38,Low
+213051589,Wyndham Vale - North,Outer / growth corridor,144.565052,-37.827035,14515,11.2,15.16,22,Low
+213051590,Wyndham Vale - South,Outer / growth corridor,144.616792,-37.889206,14135,0.2,46.69,66,High
+214011370,Carrum Downs,Outer / growth corridor,145.1758,-38.092765,23464,0.8,44.75,105,Moderate
+214011371,Frankston,Outer / growth corridor,145.139655,-38.154098,25043,1.2,53.11,133,High
+214011372,Frankston North,Outer / growth corridor,145.158047,-38.133595,19794,0,61.13,121,High
+214011373,Frankston South,Outer / growth corridor,145.129471,-38.176436,19374,1,33.55,65,Moderate
+214011374,Langwarrin,Outer / growth corridor,145.195933,-38.162609,25788,0.4,37.23,96,Moderate
+214011375,Seaford (Vic.),Outer / growth corridor,145.138453,-38.104808,18305,1.6,48.62,89,High
+214011376,Skye - Sandhurst,Outer / growth corridor,145.215085,-38.101362,13601,0.2,12.5,17,Low
+214021377,Dromana,Outer / growth corridor,144.999123,-38.335843,13925,1.2,25.85,36,Moderate
+214021378,Flinders,Outer / growth corridor,145.00006,-38.398016,6064,0.6,19.79,12,Low
+214021379,Hastings - Somers,Outer / growth corridor,145.164583,-38.345804,23795,0.1,33.2,79,Moderate
+214021381,Mount Eliza,Outer / growth corridor,145.092897,-38.195061,19110,0.7,16.22,31,Low
+214021382,Mount Martha,Outer / growth corridor,145.030737,-38.275452,20161,0.2,38.69,78,Moderate
+214021383,Point Nepean,Outer / growth corridor,144.796654,-38.378597,20574,1.7,96.24,198,High
+214021384,Rosebud - McCrae,Outer / growth corridor,144.907454,-38.368945,23508,1.3,32.75,77,Moderate
+214021385,Somerville,Outer / growth corridor,145.163899,-38.241131,19098,0.9,28.28,54,Moderate
+214021591,Mornington - East,Outer / growth corridor,145.067601,-38.234003,15082,0.1,32.49,49,Moderate
+214021592,Mornington - West,Outer / growth corridor,145.043506,-38.222205,10900,1,63.3,69,High

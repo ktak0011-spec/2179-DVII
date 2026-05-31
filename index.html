@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Is Melbourne's Public Transport Keeping Up With Its People?</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/vendor/vega.min.js"></script>
+    <script src="js/vendor/vega-lite.min.js"></script>
+    <script src="js/vendor/vega-embed.min.js"></script>
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <aside class="interaction-dock" aria-label="Quick interaction controls">
+      <div class="dock-group" aria-label="Quick area filter">
+        <span>Area</span>
+        <button type="button" class="is-active" data-area="All">All</button>
+        <button type="button" data-area="Inner Melbourne">Inner</button>
+        <button type="button" data-area="Middle ring">Middle</button>
+        <button type="button" data-area="Outer / growth corridor">Outer</button>
+      </div>
+      <div class="dock-group" aria-label="Quick access metric">
+        <span>Mode</span>
+        <button type="button" class="is-active" data-mode="all">All</button>
+        <button type="button" data-mode="train">Train</button>
+        <button type="button" data-mode="tram">Tram</button>
+        <button type="button" data-mode="bus">Bus</button>
+      </div>
+    </aside>
+    <main class="page">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="kicker">FIT2179 Data Visualisation 2</p>
+          <h1>Is Melbourne's Public Transport Keeping Up With Its People?</h1>
+          <p class="intro">
+            Melbourne is growing, but public transport access is not growing evenly with it. This story follows the gap from the map, through the fastest-growing suburbs, and into the transport modes that shape everyday access.
+          </p>
+          <p class="audience-note">
+            For a growing suburb, a new bus stop can mean more than convenience: it can decide whether a teenager reaches TAFE on time, whether a shift worker needs a second car, and whether growth feels connected or stranded.
+          </p>
+        </div>
+        <figure class="hero-media">
+          <img src="assets/melbourne-station-crowd.jpg" alt="A crowded Melbourne train station platform with a train arriving." />
+          <figcaption>Peak-hour crowding makes transport access feel immediate, not abstract.</figcaption>
+        </figure>
+        <section class="stat-strip" aria-label="Dataset summary">
+          <div class="stat">
+            <strong>361</strong>
+            <span>Greater Melbourne SA2 areas</span>
+          </div>
+          <div class="stat">
+            <strong>21,036</strong>
+            <span>GTFS stops assigned to SA2 areas</span>
+          </div>
+          <div class="stat">
+            <strong>2025</strong>
+            <span>ABS population reference year</span>
+          </div>
+        </section>
+        <section class="storyboard" aria-label="Visual story preview">
+          <h2 class="storyboard-title">The pressure builds in three steps.</h2>
+          <article>
+            <span class="storyboard-step">A</span>
+            <h2>People arrive</h2>
+            <p>Growth corridors add residents quickly, especially around Melbourne's edge.</p>
+          </article>
+          <article>
+            <span class="storyboard-step">B</span>
+            <h2>Stops thin out</h2>
+            <p>Some suburbs have very few stops once population size is considered.</p>
+          </article>
+          <article>
+            <span class="storyboard-step">C</span>
+            <h2>Trips narrow</h2>
+            <p>When access depends on fewer modes, everyday travel choices become more fragile.</p>
+          </article>
+        </section>
+      </header>
+
+      <section class="map-feature" aria-label="Greater Melbourne access map">
+        <div class="map-feature-copy">
+          <p class="kicker">Opening map</p>
+          <h2>Where public transport access thins out first.</h2>
+          <p>
+            The map leads the story because the problem is spatial: weak stop access is clustered, not evenly distributed. Red areas combine rapid growth with low access; gold areas are low-access places that may still become pressure points.
+          </p>
+        </div>
+        <figure class="map-feature-figure">
+          <img class="map-asset map-asset-large" src="assets/melbourne_access_map.svg" alt="Stylised map of Greater Melbourne SA2 areas showing low public transport access areas highlighted in red and gold." />
+          <figcaption class="map-caption">Greater Melbourne SA2 areas, with highlighted low-access and rapid-growth warning areas.</figcaption>
+        </figure>
+        <aside class="map-callout map-callout-a">
+          <strong>Growth edge</strong>
+          <span>Several highlighted SA2s sit around the expanding outer corridor, where new residents add pressure quickly.</span>
+        </aside>
+        <aside class="map-callout map-callout-b">
+          <strong>Low access is local</strong>
+          <span>The grey background stays quiet so the warning areas carry the visual argument.</span>
+        </aside>
+        <aside class="map-callout map-callout-c">
+          <strong>Next question</strong>
+          <span>The charts below test whether density, growth and transport mode explain the pattern.</span>
+        </aside>
+      </section>
+
+      <section class="controls-panel" aria-label="Interactive chart controls">
+        <div class="control-copy">
+          <p class="kicker">Interactive view</p>
+          <h2>Compare access by place and mode.</h2>
+          <p id="control-status">
+            Showing all Greater Melbourne SA2 areas using all public transport stops.
+          </p>
+        </div>
+        <div class="control-groups">
+          <fieldset class="segmented-control" aria-label="Area type filter">
+            <legend>Area type</legend>
+            <button type="button" class="is-active" data-area="All">All</button>
+            <button type="button" data-area="Inner Melbourne">Inner</button>
+            <button type="button" data-area="Middle ring">Middle</button>
+            <button type="button" data-area="Outer / growth corridor">Outer</button>
+          </fieldset>
+          <fieldset class="segmented-control" aria-label="Transport mode metric">
+            <legend>Access metric</legend>
+            <button type="button" class="is-active" data-mode="all">All</button>
+            <button type="button" data-mode="train">Train</button>
+            <button type="button" data-mode="tram">Tram</button>
+            <button type="button" data-mode="bus">Bus</button>
+          </fieldset>
+        </div>
+        <div class="tour-panel" aria-label="Guided story playback">
+          <button type="button" id="story-play" class="story-play">Play guided comparison</button>
+          <div class="tour-steps" aria-label="Guided comparison steps">
+            <button type="button" data-tour-step="0" class="is-active">Overview</button>
+            <button type="button" data-tour-step="1">Outer pressure</button>
+            <button type="button" data-tour-step="2">Bus reliance</button>
+            <button type="button" data-tour-step="3">Inner contrast</button>
+          </div>
+        </div>
+        <aside class="lens-panel" aria-live="polite" aria-label="Current selection summary">
+          <p class="lens-eyebrow">Current lens</p>
+          <div class="lens-summary">
+            <div>
+              <strong id="lens-median">...</strong>
+              <span>median stops per 10,000 residents</span>
+            </div>
+            <div>
+              <strong id="lens-warning-count">...</strong>
+              <span>rapid-growth SA2s below the low-access line</span>
+            </div>
+            <div>
+              <strong id="lens-warning-population">...</strong>
+              <span>residents living in those warning areas</span>
+            </div>
+          </div>
+          <p id="lens-note" class="lens-note">
+            The charts below update this same access measure, so the controls act as a guided comparison rather than a separate dashboard.
+          </p>
+        </aside>
+      </section>
+
+      <section class="story-section">
+        <div class="section-text">
+          <p class="section-number">02</p>
+          <h2>The mismatch is clearest when density and access are compared directly.</h2>
+          <p>
+            In a fast-growing estate, the timetable becomes part of household budgeting. If the nearest useful stop is too far away, a family may keep an older second car running, or a student may turn down a course that starts before the first reliable connection.
+          </p>
+        </div>
+        <figure class="figure wide">
+          <figcaption>The circled points are the clearest warning signs: fast-growing places with low stop access are where the network may feel stretched first. The scatter axes use a compressed scale to keep outliers visible; the ranking bars use zero baselines.</figcaption>
+          <div id="chart-scatter" class="vis"></div>
+        </figure>
+      </section>
+
+      <section class="story-section two-column">
+        <div class="section-text">
+          <p class="section-number">03</p>
+          <h2>Several low-access areas are also growth areas.</h2>
+          <p>
+            These are the places where a modest delay can spread through the day: school drop-off, a station car park, a late shift, a missed medical appointment. Low stop access is not abstract when thousands of new residents are arriving at the same time.
+          </p>
+        </div>
+        <figure class="figure">
+          <figcaption>These areas have the fewest stops per resident, so even modest population growth can make everyday trips more car-dependent.</figcaption>
+          <div id="chart-low-access" class="vis compact"></div>
+        </figure>
+      </section>
+
+      <section class="story-section two-column reverse">
+        <figure class="figure">
+          <figcaption>The fastest-growing suburbs are not all equally exposed: red and gold bars show where rapid population growth meets weaker public transport access.</figcaption>
+          <div id="chart-growth" class="vis compact"></div>
+        </figure>
+        <div class="section-text">
+          <p class="section-number">04</p>
+          <h2>Growth is pushing hardest on the city edge.</h2>
+          <p>
+            The growth figures read like a planning success story until transport is added. New homes fill quickly, but everyday access can lag behind, leaving early residents to absorb the awkward years before services catch up.
+          </p>
+        </div>
+      </section>
+
+      <section class="story-section mode-section">
+        <div class="section-text">
+          <p class="section-number">05</p>
+          <h2>The outer story is mostly a bus story.</h2>
+          <p>
+            In inner Melbourne, missing one tram may cost a few minutes. On the fringe, missing a bus can cost the next appointment. That is why mode matters: the same number of stops can still mean very different daily freedom.
+          </p>
+          <p class="takeaway-card">
+            <strong>Takeaway:</strong> the outer corridor has many stops, but almost all of them are bus or coach stops, so coverage does not necessarily mean frequent, turn-up-and-go service.
+          </p>
+        </div>
+        <div class="chart-grid side-by-side">
+          <figure class="figure">
+            <figcaption>Mode share by area type: each donut shows the percentage split, while the labels list the absolute stop count and percentage for each mode.</figcaption>
+            <div id="chart-mode-stack" class="vis compact"></div>
+          </figure>
+          <figure class="figure">
+            <figcaption>Large-population SA2s can have very different transport mixes, which means a similar stop count can represent very different travel choices.</figcaption>
+            <div id="chart-mode-dot" class="vis compact"></div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="story-section">
+        <div class="section-text">
+          <p class="section-number">06</p>
+          <h2>The risk is not just low access. It is low access plus growth.</h2>
+          <p>
+            The warning area is where two pressures meet: more people and fewer stops per resident. That combination can turn a transport gap into a local news story about traffic, parking, school travel and isolation.
+          </p>
+        </div>
+        <figure class="figure wide">
+          <figcaption>The darkest cells show where the largest resident populations sit; the most concerning cells combine rapid growth with very low or low access.</figcaption>
+          <div id="chart-heatmap" class="vis short"></div>
+        </figure>
+      </section>
+
+      <section class="story-section two-column">
+        <div class="section-text">
+          <p class="section-number">07</p>
+          <h2>The growth corridors are not a future issue. They are already moving.</h2>
+          <p>
+            The population lines show why this is not a distant planning problem. A suburb that looked manageable in 2021 can feel different by 2025, when the same routes are carrying the routines of many more households.
+          </p>
+        </div>
+        <figure class="figure">
+          <figcaption>Selected growth-corridor SA2s have added residents quickly since 2021, making transport access a current pressure rather than a distant planning issue.</figcaption>
+          <div id="chart-lines" class="vis compact"></div>
+        </figure>
+      </section>
+
+      <section class="story-section">
+        <div class="section-text">
+          <p class="section-number">08</p>
+          <h2>Aggregates can hide the suburb-level pain.</h2>
+          <p>
+            Citywide averages can make the system look calmer than it feels on the ground. The lived experience is local: one suburb may have a workable network, while the next relies on a thinner set of choices.
+          </p>
+        </div>
+        <div class="chart-grid side-by-side">
+          <figure class="figure">
+            <figcaption>At the broad area-band level the averages look calm, which is why the suburb-level charts are needed to reveal the unevenness.</figcaption>
+            <div id="chart-area-dot" class="vis short"></div>
+          </figure>
+          <figure class="figure">
+            <figcaption>Most low-access SA2s are not the densest places, but the dense low-access cases matter because many residents are affected in a small area.</figcaption>
+            <div id="chart-density" class="vis short"></div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="closing">
+        <figure class="closing-media">
+          <img src="assets/bus-stop-conclusion.jpg" alt="A public transport bus stopped at a suburban bus stop." />
+        </figure>
+        <div class="closing-copy">
+          <h2>So, is public transport keeping up?</h2>
+          <p>
+            In inner Melbourne, density and transport choice generally arrive together. In the growth corridors, the picture is more fragile: many residents depend on a bus-heavy network, and some rapidly growing SA2 areas sit near the bottom of the stop-access ranking. The next version of this project should add service frequency so that the story moves from "how many stops exist?" to "how useful are those stops during the day?"
+          </p>
+        </div>
+      </section>
+
+      <section class="sources">
+        <h2>Metadata</h2>
+        <dl class="metadata-grid">
+          <div>
+            <dt>Author</dt>
+            <dd>Kyohichi Takagaki</dd>
+          </div>
+          <div>
+            <dt>Date</dt>
+            <dd>31 May 2026</dd>
+          </div>
+        </dl>
+        <h3>Data sources</h3>
+        <ul>
+          <li>Australian Bureau of Statistics, <a href="https://www.abs.gov.au/statistics/people/population/regional-population/2024-25">Regional population 2024-25</a>, SA2 FeatureServer queried for Greater Melbourne.</li>
+          <li>PTV / Transport Victoria GTFS Schedule, downloaded from <a href="https://data.ptv.vic.gov.au/downloads/gtfs.zip">https://data.ptv.vic.gov.au/downloads/gtfs.zip</a>. GTFS file last modified 14 May 2026.</li>
+        </ul>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>

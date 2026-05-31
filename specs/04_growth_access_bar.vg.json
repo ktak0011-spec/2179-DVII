@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Annotated bar chart showing fastest-growing SA2 areas, coloured by public transport access.",
+  "width": "container",
+  "height": 380,
+  "background": "transparent",
+  "data": {"url": "data/melbourne_access.csv"},
+  "transform": [
+    {"filter": "datum.population_2025 >= 3000"},
+    {"window": [{"op": "rank", "as": "growth_rank"}], "sort": [{"field": "population_growth_pct_2024_25", "order": "descending"}]},
+    {"filter": "datum.growth_rank <= 15"}
+  ],
+  "layer": [
+    {
+      "mark": {"type": "bar", "cornerRadiusEnd": 3},
+      "encoding": {
+        "y": {"field": "sa2_name", "type": "nominal", "sort": {"field": "growth_rank", "order": "ascending"}, "title": null, "axis": {"labelLimit": 190}},
+        "x": {"field": "population_growth_pct_2024_25", "type": "quantitative", "title": "Population growth 2024-25 (%)"},
+        "color": {
+          "field": "access_category",
+          "type": "nominal",
+          "title": "Access",
+          "scale": {
+            "domain": ["Very low", "Low", "Moderate", "High"],
+            "range": ["#b45145", "#e2a43a", "#6f9ec7", "#1f7a63"]
+          }
+        },
+        "tooltip": [
+          {"field": "sa2_name", "title": "SA2"},
+          {"field": "population_growth_pct_2024_25", "title": "Growth", "format": ".1f"},
+          {"field": "population_2025", "title": "Population", "format": ",.0f"},
+          {"field": "stops_per_10000_people", "title": "Stops per 10,000", "format": ".2f"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.access_category == 'Very low' || datum.access_category == 'Low'"},
+        {
+          "calculate": "datum.access_category + ' access: ' + format(datum.stops_per_10000_people, '.1f') + ' stops per 10k'",
+          "as": "access_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 6,
+        "fontSize": 11,
+        "fontWeight": 700,
+        "color": "#293233"
+      },
+      "encoding": {
+        "y": {"field": "sa2_name", "type": "nominal", "sort": {"field": "growth_rank", "order": "ascending"}, "title": null},
+        "x": {"field": "population_growth_pct_2024_25", "type": "quantitative", "title": "Population growth 2024-25 (%)"},
+        "text": {"field": "access_label"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"gridColor": "#dfe5e3", "labelColor": "#4b5658", "titleColor": "#293233"},
+    "legend": {"labelColor": "#293233", "titleColor": "#293233"}
+  }
+}

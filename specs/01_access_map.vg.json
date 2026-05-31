@@ -1,0 +1,100 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Melbourne SA2 choropleth map showing public transport access gaps.",
+  "width": "container",
+  "height": 500,
+  "background": "transparent",
+  "projection": {
+    "type": "mercator",
+    "center": [145.1, -37.84],
+    "scale": 16500
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/map_access.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "sa2"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#818784",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.7
+      },
+      "encoding": {
+        "tooltip": [
+          {"field": "properties.sa2_name", "title": "SA2"},
+          {"field": "properties.stops_per_10000_people", "title": "Stops per 10,000 residents", "format": ".2f"},
+          {"field": "properties.population_2025", "title": "Population", "format": ",.0f"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/map_access.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "sa2"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.access_category == 'Very low' || (datum.properties.access_category == 'Low' && datum.properties.population_growth_pct_2024_25 >= 6)"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.9
+      },
+      "encoding": {
+        "color": {
+          "field": "properties.access_category",
+          "type": "nominal",
+          "title": "Access pressure",
+          "scale": {
+            "domain": ["Very low", "Low"],
+            "range": ["#b45145", "#e2a43a"]
+          }
+        },
+        "tooltip": [
+          {"field": "properties.sa2_name", "title": "Highlighted SA2"},
+          {"field": "properties.access_category", "title": "Access"},
+          {"field": "properties.stops_per_10000_people", "title": "Stops per 10,000 residents", "format": ".2f"},
+          {"field": "properties.population_growth_pct_2024_25", "title": "Growth 2024-25", "format": ".1f"},
+          {"field": "properties.population_2025", "title": "Population", "format": ",.0f"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"longitude": 145.78, "latitude": -38.43, "label": "MELBOURNE"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "fontSize": 18,
+        "fontWeight": 800,
+        "color": "#4f5754"
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "legend": {
+      "labelColor": "#293233",
+      "titleColor": "#293233",
+      "orient": "right"
+    }
+  }
+}
